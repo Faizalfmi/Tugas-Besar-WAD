@@ -33,9 +33,9 @@
 
 <body>
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
         <a href="home.php" class="navbar-brand ms-lg-5">
-            <img src="img/logo-ans.jpeg" width="150" height="50">
+            <img src="img/logo-ans.png" width="150" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
