@@ -75,7 +75,7 @@ tr:nth-child(even) {
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
         <a href="Home_after.php" class="navbar-brand ms-lg-5">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" width="150" height="50"></a>
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" width="150" height="50"></a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -124,32 +124,32 @@ tr:nth-child(even) {
     <!-- Hero End -->
     
     <div class="container mt-5" style="width:100%">
-        <form action="/service_edit/{{ $tampil->id}}" method="POST" enctype="multipart/form-data">
+        <form action="/service_edit/{{ $data->id}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3">
                 <label for="service" class="form-label">
                     Nama Service
                 </label>
-                <input type="text" id="service" class="form-control" placeholder="" name="service">
+                <input type="text" id="service" class="form-control" placeholder="{{ $data->service}}" name="service">
             </div>
             <div class="mb-3">
                 <label for="satuan" class="form-label">
                     Satuan
                 </label>
-                <input type="text" id="satuan" class="form-control" placeholder="" name="satuan">
+                <input type="text" id="satuan" class="form-control" placeholder="{{ $data->satuan}}" name="satuan">
             </div>
             <div class="mb-3">
                 <label for="jumlah" class="form-label">
                     Jumlah
                 </label>
-                <input type="number" id="jumlah" class="form-control" placeholder="" name="jumlah">
+                <input type="number" id="jumlah" class="form-control" placeholder="{{ $data->jumlah}}" name="jumlah">
             </div>
             <div class="mb-3">
                 <label for="harga" class="form-label">
                     Harga
                 </label>
-                <input type="text" id="harga" class="form-control" name="harga" placeholder="">
+                <input type="text" id="harga" class="form-control" name="harga" placeholder="{{ $data->harga}}">
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">

@@ -75,7 +75,7 @@ tr:nth-child(even) {
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
         <a href="Home_after.php" class="navbar-brand ms-lg-5">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" width="150" height="50"></a>
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" width="150" height="50"></a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -159,8 +159,10 @@ tr:nth-child(even) {
                     <br></br>
                 </form>
             </div>
+        </div>
+    </div>
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 py-5">
+    <div class="container-fluid bg-dark text-light mt-5 py-5" style="width: 100%;">
         <div class="container pt-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">

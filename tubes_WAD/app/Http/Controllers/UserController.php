@@ -53,7 +53,7 @@ class UserController extends Controller
             'name' => 'required',
             'no_hp' => 'required',
             'password' => 'required',
-            'repassword' => 'required|same:password',
+            'confirm' => 'required|same:password',
         ]);
         if (Hash::check($request->password, Auth::user()->password)) {
             User::where('id', Auth::user()->id)->update([

@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ANS | Services</title>
+    <title>ANS - Home Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,7 +30,56 @@
     <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
 </head>
+<style>
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #aeaeae;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+th{
+    background-color: #d4e6ff;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#edit{
+    color: white;
+    background-color: #2878EB;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+#hapus{
+    color: white;
+    background-color: #e93143;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+#add{
+    color: white;
+    background-color: #2878EB;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+}
+
+</style>
 <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
@@ -70,97 +119,63 @@
     <!-- Navbar End -->
 
 
+
     <!-- Hero Start -->
     <div class="container-fluid p-5 hero-header mb-5" style="background-color: #172F36;">
         <div class="row py-5">
             <div class="col-12 text-center">
-                <h1 class="display-1 text-white animated zoomIn">Services</h1>
-                <a href="" class="h4 text-white">Home</a>
-                <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h4 text-white">Pricing</a>
+                <h1 class="display-1 text-white animated zoomIn">Service</h1>
+                <a href="" class="h4 text-white">List of the services we offer</a>
+                
             </div>
         </div>
     </div>
     <!-- Hero End -->
-
-
-
-    <!-- Pricing Plan Start -->
-    <div class="container-fluid py-5" style="margin-bottom: 75px;">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">Pricing Plan</h5>
-                <h1 class="display-5 mb-0">Pricing Plan For Our Services</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4" style="width: 25%;">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
-                            <h3 class="text-white">UTP Cabling Installation</h3>
-                            
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">Installation Cabling UTP/LAN</p>
-                            <p class="border-bottom border-light mb-2 pb-2">UTP Materials</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Materials Support</p>
-                            
-                        </div>
-                        <a href="/service_detail/'UTP Cabling Installation'" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Detail</a>
-                    </div>
-                </div>
-                <div class="col-lg-4" style="width: 25%;">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
-                            <h3 class="text-white">FO Cabling Installation</h3>
-                            
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">Installation Cabling FO</p>
-                            <p class="border-bottom border-light mb-2 pb-2">FO Material</p>
-                            <p class="border-bottom border-light mb-2 pb-2">6 Core OM3 Multimode</p>
-                           
-                        </div>
-                        <a href="/service_detail/'FO Cabling Installation'" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Detail</a>
-                    </div>
-                </div>
-                <div class="col-lg-4" style="width: 25%;">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
-                            <h3 class="text-white">Installation & Configuration</h3>
-                            
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">Device Installation</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Device Configuration</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Virtual LAN</p>
-                            
-                        </div>
-                        <a href="/service_detail/'Installation & Configuration'" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Detail</a>
-                    </div>
-                </div>
-                <div class="col-lg-4" style="width: 25%;">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
-                            <h3 class="text-white">Maintenance Service</h3>
-                            
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">Corrective Maintenance</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Preventive Maintenance</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Helpdesk</p>
-                            
-                        </div>
-                        <a href="/service_detail/'Maintenance Service'" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Detail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pricing Plan End -->
-
-
     
-
+    <div class="container-fluid">
+        
+        <table>
+            <tr>
+                <th><strong>Jenis Service</strong></th>
+                <th><strong>Keterangan Service</strong></th>
+                <th><strong>Jumlah</strong></th>
+                <th><strong>Satuan</strong></th>
+                <th><strong>Harga</strong></th>
+                @if(Auth::user())
+                <th><strong>Action</strong></th>
+                @endif
+            </tr>
+            @foreach ($data as $tampil)
+            <tr>
+            
+                <td>{{ $tampil->service}}</td>
+                <td style="text-align: left; width: 500px;">{{ $tampil->description}}</td>
+                <td>{{ $tampil->jumlah}}</td>
+                <td>{{ $tampil->satuan}}</td>
+                <td>{{ $tampil->harga}}</td>
+                
+                @if(Auth::user())
+                <td><form action="/edit_service_page/{{ $tampil->id}}">
+                        <input type="submit" value="Edit" id="edit">
+                    </form><br>
+                    
+                    <form action="/service_delete/{{ $tampil->id}}">
+                        <input type="submit" value="Hapus" id="hapus">
+                    </form>
+                </td>
+                @endif
+                
+            </tr>
+            @endforeach
+        </table>
+        <br>
+        <br>
+        @if(Auth::user())
+        <form action="/service_add">
+            <center><input type="submit" value="Add" id="add"></center>
+        </form>
+        @endif
+    </div>
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5">
         <div class="container pt-5">
@@ -172,7 +187,7 @@
                     <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>021 55712013</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Follow Us</h3>
+                    <h3 class="text-white mb-4">Follow Us</h3>
                     <div class="d-flex">
                         <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
@@ -184,10 +199,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
-
-    
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

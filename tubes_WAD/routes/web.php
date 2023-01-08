@@ -40,7 +40,7 @@ Route::get('/aboutus', function () {
 });
 
 Route::get('/edit_service_page/{id}', function ($id) {
-    $data = DB::table('service')->where('id', $id)->first();
+    $data = DB::table('services')->where('id', $id)->first();
     return view('edit_service', ['data' => $data]);
 });
 
@@ -50,13 +50,17 @@ Route::get('/product_add', function () {
     return view('product_add');
 });
 
+Route::get('/service_add', function () {
+    return view('add_service');
+});
+
 Route::get('/product_edit_page/{id}', function ($id) {
     $data = DB::table('products')->where('id', $id)->first();
     return view('product_edit', ['data' => $data]);
 });
 
 Route::get('/service', function () {
-    $data = DB::table('service')->get();
+    $data = DB::table('services')->get();
     return view('service', ['data' => $data]);
 });
 
@@ -70,10 +74,7 @@ Route::get('/product_detail/{id}', function ($id) {
     return view('product_detail', ['data' => $data]);
 });
 
-Route::get('/service_detail/{service}', function ($service) {
-    $data = DB::table('service')->where('id', $service)->first();
-    return view('service_detail', ['data' => $data]);
-});
+
 
 Route::get('/profile', function () {
     $data = User::find(Auth::user()->id);

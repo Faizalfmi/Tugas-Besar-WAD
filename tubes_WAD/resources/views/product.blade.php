@@ -122,11 +122,11 @@ tr:nth-child(even) {
         </div>
     </div>
     <!-- Hero End -->
-    <div class="container" style="margin-left: 10%;"></div>
-        <div class='row row-cols-3 gap-6'>
+    <div class="container" ></div>
+        <div class='row row-cols-3 gap-6' style="margin-left: 10%;">
             @foreach ($data as $tampil)
-            <div class='card'>
-                <img class='card-img-top' src='/{{ asset('storage/'.$tampil->image) }}' alt='No Image'/>
+            <div class='card' style="width: 25%;">
+                <img class='card-img-top' src='{{ asset('storage/'.$tampil->image) }}' alt='No Image'/>
                 <div class='card-body'>
                     <h5 class='card-title'><center><b>{{ $tampil->product_name}}</b></center></h5>
                     <p class='card-text'>{{ substr($tampil->description, 0, 50);}}...</p>
@@ -147,7 +147,7 @@ tr:nth-child(even) {
         <form action="/product_add">
             @csrf
             @method('GET')
-            <input type="submit" value="Add" id="edit">
+            <center><input type="submit" value="Add" id="edit"></center>
         </form>
     @endif
     <!-- Footer Start -->
