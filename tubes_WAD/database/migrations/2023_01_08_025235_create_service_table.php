@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('service', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',255);
-            $table->string('no_hp',255);
-            $table->string('email',255);
-            $table->string('password',255);
+            $table->string('service',255);
+            $table->string('satuan',255);
+            $table->integer('jumlah');
+            $table->string('harga',255);
+            $table->text('description');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('service');
     }
 };

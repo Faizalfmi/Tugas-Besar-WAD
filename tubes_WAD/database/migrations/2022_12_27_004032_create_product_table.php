@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('product_name',255);
             $table->string('product_category',255);
-            $table->integer('price');
+            $table->string('price',255);
             $table->integer('stock');
             $table->text('description');
             $table->string('image',255);
