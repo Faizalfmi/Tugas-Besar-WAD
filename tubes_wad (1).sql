@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3325
--- Generation Time: Dec 27, 2022 at 01:59 AM
+-- Generation Time: Jan 09, 2023 at 03:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,22 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `tubes_wad`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admins`
---
-
-CREATE TABLE `admins` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `no_hp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -75,7 +59,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2022_12_27_004032_create_product_table', 1),
-(6, '2022_12_27_005418_create_admins_table', 1);
+(6, '2022_12_27_005418_create_admins_table', 1),
+(8, '2023_01_08_025235_create_service_table', 2),
+(9, '2023_01_08_141235_create_services_table', 3);
 
 -- --------------------------------------------------------
 
@@ -118,13 +104,46 @@ CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `product_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `product_category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `stock` int(11) NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product_name`, `product_category`, `price`, `stock`, `description`, `image`, `created_at`, `updated_at`) VALUES
+(3, 'Kabel LAN UTP 3M RJ45', 'Lan', 'Rp 8000', 5, 'sdfsaff eghfgefsg erg erge dsfds', '63bac71c027a8_lan.jpg', '2023-01-08 06:37:32', '2023-01-08 06:37:32'),
+(4, 'Kabel Data Panduit', 'kabel', 'Rp 1.700.000', 7, 'Model Number:	NVL-DPSM1-ST-ST-002\r\nFiber Type	9μm (Singlemode)\r\nZipcord Type	Duplex\r\nConnector Type on Grip End	ST', '63bac8c15a49f_b573b74e-f57c-4d1d-a561-734f2b086d56.jpg', '2023-01-08 06:44:33', '2023-01-08 06:44:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `satuan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  `harga` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `service`, `satuan`, `jumlah`, `harga`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'UTP Cabling Installation', 'titik', 1, 'Rp 500.000', 'Installation Cabling UTP/LAN : \r\n- Installation and Pulling UTP Cable End to End; \r\n- Termination, Testing and Commisioning UTP Cable; \r\n- Labeling & Documentation; \r\n- Civil Work;', '2023-01-08 07:15:09', '2023-01-08 07:15:09'),
+(4, 'UTP Cabling Installation', 'titik', 1, 'Rp 1.250.000', 'UTP Materials (60 meter per titik) : - Copper Cable,Cat 6,UTP; - 24 port modular patch panel with labels; - 1U Cables Management; - Cat6 UTP Jack Module for Patch Panels; - Cat6 UTP Jack Module for Workstation; - Category 6 UTP Patch Cords,1m; - Category 6 UTP Patch Cords,3m; - 2 port shuttered faceplate; - RJ 45 Cat.6;', '2023-01-08 07:20:34', '2023-01-08 07:20:34');
 
 -- --------------------------------------------------------
 
@@ -143,14 +162,15 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `users`
 --
 
+INSERT INTO `users` (`id`, `name`, `no_hp`, `email`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'faizal', '123456', 'faizal@email.com', '$2y$10$qv/gm17NIa7gMvhexwlDdeGg0vrWqchZWL8TIdJyqrlhO0QzAr0KS', '2023-01-07 21:08:40', '2023-01-07 21:08:40');
+
 --
--- Indexes for table `admins`
+-- Indexes for dumped tables
 --
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -186,6 +206,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -194,12 +220,6 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admins`
---
-ALTER TABLE `admins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -211,7 +231,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -223,13 +243,19 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
