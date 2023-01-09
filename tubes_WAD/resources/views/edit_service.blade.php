@@ -124,6 +124,13 @@ tr:nth-child(even) {
     <!-- Hero End -->
     
     <div class="container mt-5" style="width:100%">
+    @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </div>
+                            @endif
         <form action="/service_edit/{{ $data->id}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')

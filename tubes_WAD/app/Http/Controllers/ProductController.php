@@ -45,7 +45,7 @@ class ProductController extends Controller
             'category' => 'required',
             'harga' => 'required',
             'stok' => 'required',
-            'description' => 'required',
+            'deskripsi' => 'required',
             'image' => 'mimes:jpeg,png,jpg',
         ]);
 
@@ -60,7 +60,7 @@ class ProductController extends Controller
             'product_category' => $request->category,
             'price' => $request->harga,
             'stock' => $request->stok,
-            'description' => $request->description,
+            'description' => $request->deskripsi,
             'image' => $filename,
         ]);
         return redirect('/product')->with('success', 'Produk berhasil diupdate');

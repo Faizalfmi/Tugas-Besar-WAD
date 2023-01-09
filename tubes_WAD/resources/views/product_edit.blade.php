@@ -128,6 +128,13 @@ tr:nth-child(even) {
         <div class='d-flex justify-content-center align-items-start gap-5 mt-5'>
             <img src='{{ asset('storage/'.$data->image) }}' class="col-6" alt="No Image"></img>
             <div class="col-6">
+            @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </div>
+                            @endif
                 <form action="/product_edit/{{ $data->id }}" enctype='multipart/form-data' method="POST">
                     @csrf
                     @method("PUT")
