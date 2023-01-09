@@ -49,7 +49,7 @@ class ProductController extends Controller
             'image' => 'mimes:jpeg,png,jpg',
         ]);
 
-        $file = $request->file('Foto');
+        $file = $request->file('image');
         $filename = uniqid() . "_" . $file->getClientOriginalName();
         $file->storeAs('public/', $filename);
 
