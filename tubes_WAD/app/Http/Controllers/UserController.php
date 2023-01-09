@@ -51,14 +51,14 @@ class UserController extends Controller
         $request->validate([
             'email' => 'required',
             'name' => 'required',
-            'no_hp' => 'required',
+            'hp' => 'required',
             'password' => 'required',
             'confirm' => 'required|same:password',
         ]);
         if (Hash::check($request->password, Auth::user()->password)) {
             User::where('id', Auth::user()->id)->update([
                 'email' => $request->email,
-                'no_hp' => $request->no_hp,
+                'no_hp' => $request->hp,
                 'password' => bcrypt($request->password),
                 'name' => $request->name,
             ]);

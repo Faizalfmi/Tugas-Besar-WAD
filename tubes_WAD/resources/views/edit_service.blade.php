@@ -85,8 +85,8 @@ tr:nth-child(even) {
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/aboutus" class="nav-item nav-link">About Us</a>
                 
-                <div class="nav-item dropdown active">
-                    <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Product/Service</a>
+                <div class="nav-item dropdown">
+                    <a  class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Product/Service</a>
                     <div class="dropdown-menu m-0">
                         <a href="/service" class="dropdown-item">Service</a>
                         <a href="/product" class="dropdown-item">Product</a>
@@ -155,7 +155,7 @@ tr:nth-child(even) {
                 <label for="description" class="form-label">
                     Deskripsi
                 </label>
-                <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                <textarea class="form-control" id="description" rows="3" name="description" placeholder="{{ $data->description}}"></textarea>
             </div>
             <br></br>
             <input type="submit" class="btn btn-primary" name="edit" value="Edit">

@@ -85,8 +85,8 @@ tr:nth-child(even) {
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/aboutus" class="nav-item nav-link">About Us</a>
                 
-                <div class="nav-item dropdown active">
-                    <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Product/Service</a>
+                <div class="nav-item dropdown">
+                    <a  class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Product/Service</a>
                     <div class="dropdown-menu m-0">
                         <a href="/service" class="dropdown-item">Service</a>
                         <a href="/product" class="dropdown-item">Product</a>
@@ -94,7 +94,7 @@ tr:nth-child(even) {
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact Us</a>
                 @if(Auth::user())
-                <div class="nav-item dropdown active">
+                <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{Auth::user()->name}}</a>
                     <div class="dropdown-menu m-0">
                         <a href="/profile" class="dropdown-item">Profile</a>

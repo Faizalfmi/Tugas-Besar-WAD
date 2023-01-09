@@ -94,8 +94,8 @@ tr:nth-child(even) {
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/aboutus" class="nav-item nav-link">About Us</a>
                 
-                <div class="nav-item dropdown active">
-                    <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Product/Service</a>
+                <div class="nav-item dropdown">
+                    <a  class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Product/Service</a>
                     <div class="dropdown-menu m-0">
                         <a href="/service" class="dropdown-item">Service</a>
                         <a href="/product" class="dropdown-item">Product</a>

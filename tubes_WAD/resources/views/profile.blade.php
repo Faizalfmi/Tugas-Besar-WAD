@@ -36,7 +36,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/aboutus" class="nav-item nav-link">About Us</a>
                 
                 <div class="nav-item dropdown">
@@ -49,7 +49,7 @@
                 <a href="/contact" class="nav-item nav-link">Contact Us</a>
                 @if(Auth::user())
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{Auth::user()->name}}</a>
+                    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">{{Auth::user()->name}}</a>
                     <div class="dropdown-menu m-0">
                         <a href="/profile" class="dropdown-item">Profile</a>
                         <a href="/logout" class="dropdown-item">Logout</a>

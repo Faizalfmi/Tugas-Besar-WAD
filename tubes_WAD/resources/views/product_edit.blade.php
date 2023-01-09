@@ -18,17 +18,17 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <style>
     table {
@@ -75,7 +75,7 @@ tr:nth-child(even) {
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
         <a href="Home_after.php" class="navbar-brand ms-lg-5">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" width="150" height="50"></a>
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" width="150" height="50"></a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -85,8 +85,8 @@ tr:nth-child(even) {
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/aboutus" class="nav-item nav-link">About Us</a>
                 
-                <div class="nav-item dropdown active">
-                    <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Product/Service</a>
+                <div class="nav-item dropdown">
+                    <a  class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Product/Service</a>
                     <div class="dropdown-menu m-0">
                         <a href="/service" class="dropdown-item">Service</a>
                         <a href="/product" class="dropdown-item">Product</a>
@@ -162,6 +162,8 @@ tr:nth-child(even) {
                     <br></br>
                 </form>
             </div>
+        </div>
+    </div>
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5">
         <div class="container pt-5">
